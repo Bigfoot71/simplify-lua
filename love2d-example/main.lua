@@ -106,8 +106,8 @@ function love.draw()
 
     love.graphics.print(str, Win_w-w, 0)
 
-    local str = "LEFT and RIGHT to change 'tolerance': "..tostring(tolerance)
-    local w = Font:getWidth(str)
+    str = "LEFT and RIGHT to change 'tolerance': "..tostring(tolerance)
+    w = Font:getWidth(str)
 
     love.graphics.print(str, Win_w-w, Win_h-32)
 
