@@ -11,7 +11,7 @@ local getSegDist = function(p, p1, p2)
 
     if dx ~= 0 or dy ~= 0 then
 
-        t = ((p[1] - x) * dx + (p[2] - y) * dy) / (dx^2 + dy^2)
+        local t = ((p[1] - x) * dx + (p[2] - y) * dy) / (dx^2 + dy^2)
 
         if t > 1 then
             x, y = p2[1], p2[2]
@@ -102,7 +102,7 @@ local function simplify(points, tolerance, highestQuality)
     tolerance = tolerance or .1
     highestQuality = highestQuality or true
 
-    sqtolerance = tolerance ^ 2
+    local sqtolerance = tolerance ^ 2
 
     if not highestQuality then
         points = simplifyRadialDistance(points, sqtolerance)
