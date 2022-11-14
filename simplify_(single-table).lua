@@ -1,4 +1,4 @@
-local getDist function(x1,y1,x2,y2)
+local getDist = function(x1,y1,x2,y2)
     return math.sqrt((x1-x2)^2+(y1-y2)^2)
 end
 
@@ -9,7 +9,7 @@ local getSegDist = function(x,y, x1,y1, x2,y2)
 
     if dx ~= 0 or dy ~= 0 then
 
-        t = ((x - x1) * dx + (y - y1) * dy) / (dx^2 + dy^2)
+        local t = ((x - x1) * dx + (y - y1) * dy) / (dx^2 + dy^2)
 
         if t > 1 then
             x1, y1 = x2, y2
@@ -109,7 +109,7 @@ local function simplify(points, tolerance, highestQuality)
     tolerance = tolerance or .1
     highestQuality = highestQuality or true
 
-    sqtolerance = tolerance ^ 2
+    local sqtolerance = tolerance ^ 2
 
     if not highestQuality then
         points = simplifyRadialDistance(points, sqtolerance)
