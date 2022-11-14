@@ -6,7 +6,7 @@ This is a Lua port of [simplify-js](https://github.com/mourner/simplify-js) by V
 
 ```
 simplify = require("simplify")
-local points = simplify(points, tolerance, highQuality)
+local points = simplify(points, tolerance, highestQuality)
 ```
 
 ### Function parameters
